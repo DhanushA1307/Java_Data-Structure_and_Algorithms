@@ -29,4 +29,18 @@ public class insertion
         }
         return head;
     }
+    public Node<T> insertAtPosition(Node<T> head, T data, int position){
+        if(head == null){
+            return (new Node<T>(data));
+        }else{
+            Node<T> temp = head;
+            for(int i = 0; i < position-1; i++){
+                temp = temp.next;
+            }
+            Node<T> newNode = new Node<T>(data);
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+        return head;
+    }
 }
