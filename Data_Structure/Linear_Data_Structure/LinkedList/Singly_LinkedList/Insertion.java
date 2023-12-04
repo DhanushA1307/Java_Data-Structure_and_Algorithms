@@ -17,4 +17,16 @@ public class Node<T> insertion
         }
         return head;
     }
+    public Node<T> insertAtEnd(Node<T> head, T data){
+        if(head == null){
+            head = new Node<T>(data);
+        }else{
+            Node<T> temp = head;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = new Node<T>(data);
+        }
+        return head;
+    }
 }
