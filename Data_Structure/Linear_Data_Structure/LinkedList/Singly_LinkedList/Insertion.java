@@ -1,7 +1,7 @@
 package Data_Structure.Linear_Data_Structure.LinkedList.Singly_LinkedList;
 import java.util.*;
 
-public class Node<T> insertion
+public class insertion
 {
     public Node<T> insertAtBegin(Node<T> head, T data)
     {
