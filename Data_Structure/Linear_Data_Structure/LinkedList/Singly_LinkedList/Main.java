@@ -6,7 +6,6 @@ public class Main{
         
         Insertion I = new Insertion();
         Deletion D = new Deletion();
-        Others O = new Others();
         
         Node<Integer> head= null;
         Boolean cond = true;
@@ -23,17 +22,19 @@ public class Main{
                         case 1:
                             System.out.print("Enter the data: ");
                             int data = sc.nextInt();
-                            head = I.insert_begin(head, data);
+                            head = I.insertAtBegin(head, data);
                             break;
                         case 2:
                             System.out.print("Enter the data: ");
                             data = sc.nextInt();
-                            head = I.insert_end(head, data);
+                            head = I.insertAtEnd(head, data);
                             break;
                         case 3:
                             System.out.print("Enter the data: ");
                             data = sc.nextInt();
-                            head = I.insert_mid(head, data);
+                            System.out.print("Enter the position: ");
+                            int pos = sc.nextInt();
+                            head = I.insertAtPosition(head, data, pos);
                             break;
                         default:
                             System.out.println("Invalid choice!");
@@ -61,10 +62,10 @@ public class Main{
                     ch = sc.nextInt();
                     switch(ch){
                         case 1:
-                            O.Prints(head);
+                            Others.Prints(head);
                             break;
                         case 2:
-                            System.out.println("Middle: "+O.middle(head).data);
+                            System.out.println("Middle: "+ Others.middle(head).data);
                             break;
                         default:
                             System.out.println("Invalid choice!");

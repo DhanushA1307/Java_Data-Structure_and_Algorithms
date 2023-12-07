@@ -1,38 +1,37 @@
 package Data_Structure.Linear_Data_Structure.LinkedList.Singly_LinkedList;
-import java.util.*;
 
-public class insertion{
-    public Node<T> insertAtBegin(Node<T> head, T data){
+public class Insertion<T>{
+    public Node insertAtBegin(Node head, T data){
         if(head == null){
-            head = new Node<T>(data);
+            head = new Node(data);
         }else{
-            Node<T> temp = new Node<T>(data);
+            Node temp = new Node(data);
             temp.next = head;
             head = temp;
         }
         return head;
     }
-    public Node<T> insertAtEnd(Node<T> head, T data){
+    public Node insertAtEnd(Node head, T data){
         if(head == null){
-            head = new Node<T>(data);
+            head = new Node(data);
         }else{
-            Node<T> temp = head;
+            Node temp = head;
             while(temp.next != null){
                 temp = temp.next;
             }
-            temp.next = new Node<T>(data);
+            temp.next = new Node(data);
         }
         return head;
     }
-    public Node<T> insertAtPosition(Node<T> head, T data, int position){
+    public Node insertAtPosition(Node head, T data, int position){
         if(head == null){
-            return (new Node<T>(data));
+            return (new Node(data));
         }else{
-            Node<T> temp = head;
+            Node temp = head;
             for(int i = 0; i < position-1; i++){
                 temp = temp.next;
             }
-            Node<T> newNode = new Node<T>(data);
+            Node newNode = new Node(data);
             newNode.next = temp.next;
             temp.next = newNode;
         }

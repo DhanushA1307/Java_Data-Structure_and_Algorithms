@@ -1,20 +1,19 @@
 package Data_Structure.Linear_Data_Structure.LinkedList.Singly_LinkedList;
-import java.util.*;
 
-public class Deletion{
-    public Node<T> delete_begin(Node<T> head){
+public class Deletion{    
+    public Node delete_begin(Node head){
         return (head.next);
     }
-    public Node<T> delete_end(Node<T> head){
-        Node<T> temp = head;
+    public Node delete_end(Node head){
+        Node temp = head;
         while(temp.next.next != null) temp = temp.next;
         temp.next = null;
         return head;
     }
-    public Node<T> delete_mid(Node<T> head){
-        Node<T> temp = head;
+    public Node delete_mid(Node head){
+        Node temp = head;
         while(temp != null){
-            if(temp.next == Others<T>.middle(head)){
+            if(temp.next == Others.middle(head)){
                 temp.next = temp.next.next;
                 break;
             }
