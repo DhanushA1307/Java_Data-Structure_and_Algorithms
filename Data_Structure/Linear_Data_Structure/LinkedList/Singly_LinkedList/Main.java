@@ -5,7 +5,6 @@ public class Main{
     public static void main(String[] args){
         
         Insertion I = new Insertion();
-        Deletion D = new Deletion();
         
         Node<Integer> head= null;
         Boolean cond = true;
@@ -45,13 +44,13 @@ public class Main{
                     ch = sc.nextInt();
                     switch(ch){
                         case 1:
-                            head = D.delete_begin(head);
+                            head = Deletion.delete_begin(head);
                             break;
                         case 2:
-                            head = D.delete_end(head);
+                            head = Deletion.delete_end(head);
                             break;
                         case 3:
-                            head = D.delete_mid(head);
+                            head = Deletion.delete_mid(head);
                             break;
                         default:
                             System.out.println("Invalid choice!");
