@@ -11,4 +11,15 @@ public class Deletion{
         temp.next = null;
         return head;
     }
+    public Node<T> delete_mid(Node<T> head){
+        Node<T> temp = head;
+        while(temp != null){
+            if(temp.next == Others<T>.middle(head)){
+                temp.next = temp.next.next;
+                break;
+            }
+            temp = temp.next;
+        }
+        return head;
+    }
 }
