@@ -5,4 +5,10 @@ public class Deletion{
     public Node<T> delete_begin(Node<T> head){
         return (head.next);
     }
+    public Node<T> delete_end(Node<T> head){
+        Node<T> temp = head;
+        while(temp.next.next != null) temp = temp.next;
+        temp.next = null;
+        return head;
+    }
 }
