@@ -2,7 +2,7 @@ package Data_Structure.Linear_Data_Structure.LinkedList.Circular_Singly_LinkedLi
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        Node<Integer> head = null;
+        Node<Integer> head = null, tail = null;
         Boolean cond = true;
         Scanner sc = new Scanner(System.in);
         while(cond){
